@@ -3,10 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('build/lift.css') }}">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {% include 'navigation.html.twig' %}
+    {% else %}
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <ul class="navbar-nav row justify-content-between w-100 mx-auto">
+                <li class="col-4">
+                    <a class="nav-item btn btn-primary w-100" href="">Home</a>
+                </li>
+                <li class="col-4 text-center">
+                    <a class="nav-item navbar-brand w-100" href="#">GymFury</a>
+                </li>
+                <li class="col-4">
+                    <a class="nav-item btn btn-success w-100" href="">Register</a>
+                </li>
+            </ul>
+        </nav>
+    {% endif %}{% block body %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('build/lift.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

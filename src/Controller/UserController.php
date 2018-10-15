@@ -25,12 +25,13 @@ class UserController extends AbstractController
     public function makeUsers()
     {
 //        $user = new User();
-//        $user->setEmail('dragon@diersendesign.com');
-//        $user->setFirstName('Dragon');
+//        $user->setEmail('dragon@reborn.net');
+//        $user->setFirstName('Rand');
+//        $user->setRoles(['ROLE_DRAGON']);
 //
 //        $em = $this->getDoctrine()->getManager();
 //        $em->persist($user);
 //        $em->flush();
-        return index();
+        return $this->index();
     }
 }

@@ -1,0 +1,12 @@
+[Sun Oct 14 18:24:40.119700 2018] [core:info] [pid 24949] [client 192.168.1.8:52710] AH00128: File does not exist: /home/cippio/Web/lift/public/favicon.ico, referer: http://lift.test/
+[Sun Oct 14 18:29:51.761442 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/af5341, referer: http://lift.test/
+[Sun Oct 14 18:29:52.782159 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/af5341, referer: http://lift.test/
+[Sun Oct 14 18:29:53.788016 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/af5341, referer: http://lift.test/
+[Sun Oct 14 18:29:54.793211 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/af5341, referer: http://lift.test/
+[Sun Oct 14 18:29:55.591942 2018] [core:info] [pid 24950] [client 192.168.1.8:52737] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/cc4870, referer: http://lift.test/
+[Sun Oct 14 18:29:56.152605 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/4d4bb7, referer: http://lift.test/
+[Sun Oct 14 18:29:57.157927 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/4d4bb7, referer: http://lift.test/
+[Sun Oct 14 18:29:58.163287 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/4d4bb7, referer: http://lift.test/
+[Sun Oct 14 18:29:59.169980 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/4d4bb7, referer: http://lift.test/
+[Sun Oct 14 18:30:00.175779 2018] [core:info] [pid 24949] [client 192.168.1.8:52736] AH00128: File does not exist: /home/cippio/Web/lift/public/_wdt/4d4bb7, referer: http://lift.test/
+[Sun Oct 14 18:30:07.566925 2018] [core:info] [pid 24976] [client 192.168.1.8:52742] AH00128: File does not exist: /home/cippio/Web/lift/public/login

@@ -1,17 +1,17 @@
 <?php
 
-	$isSecure = false;
-	if ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ||
-		(!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ||
-!empty($_SERVER['HTTP_X_FORWARDED_SSL']) &&
-		$_SERVER['HTTP_X_FORWARDED_SSL'] == 'on')) {
-			$isSecure = true;
-	}
-
-	if (!$isSecure) {
-		header("Location: https://diersendesign.com/lift/public");
-		exit;
-	}
+//	$isSecure = false;
+//	if ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ||
+//		(!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ||
+//!empty($_SERVER['HTTP_X_FORWARDED_SSL']) &&
+//		$_SERVER['HTTP_X_FORWARDED_SSL'] == 'on')) {
+//			$isSecure = true;
+//	}
+//
+//	if (!$isSecure) {
+//		header("Location: https://diersendesign.com/lift/public");
+//		exit;
+//	}
 
 use App\Kernel;
 use Symfony\Component\Debug\Debug;
