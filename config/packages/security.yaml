@@ -1,7 +1,9 @@
 security:
-    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+
     providers:
-        # used to reload user from session & other features (e.g. switch_user)
         app_user_provider:
             entity:
                 class: App\Entity\User
@@ -16,7 +18,34 @@ security:
             guard:
                 authenticators:
                     - App\Security\LoginFormAuthenticator
+                    - App\Security\ApiTokenAuthenticator
+
+                # redirect anonymous users to the login page
+                entry_point: App\Security\LoginFormAuthenticator
+
+            logout:
+                path: lift_logout
+
+            remember_me:
+                secret: '%kernel.secret%'
+                lifetime: 2592000 # 30 days in seconds
+
+            switch_user: true
 
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # /login must be accessible by all users at the site
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        # /register must be accessible by all users at the site
+        - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        # /make-users-just-this-once accessable by anonymous
+        - { path: ^/make-users-just-this-once, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        # Require ADMIN clearance for all pages under /admin
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        # Require users who want to change their profile or password to log in this session
+        - { path: ^/account, roles: IS_AUTHENTICATED_FULLY }
+        # Require all users to have been logged on with a specific timeframe
+        - { path: ^/, roles: IS_AUTHENTICATED_REMEMBERED }
         # - { path: ^/profile, roles: ROLE_USER }
+
+    role_hierarchy:
+        ROLE_ADMIN: [ROLE_TRAINER, ROLE_MEMBER, ROLE_ALLOWED_TO_SWITCH]
